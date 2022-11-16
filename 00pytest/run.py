@@ -8,7 +8,7 @@ import os
 if __name__ == '__main__':
     #执行用例生产测试数据
     # pytest.main(['-s', '-v','test_login.py', '--alluredir', './allure-results'])
-    pytest.main(['-s', '-v','test_login.py', '--alluredir=report/results'])
+    pytest.main(['-s', '-v','test_login.py', '--alluredir=report/results', '--clean-alluredir'])
     #生成测试报告
     # os.system('allure generate ./allure-results -o ./reports')
-    os.system('allure generate report/results -o report/report-html')
+    os.system('allure generate report/results -o report/report-html --clean')
